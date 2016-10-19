@@ -6,7 +6,7 @@ return function (context, callback) {
             + context.webhook.repository.full_name);
         var url = 'https://slack.com/api/chat.postMessage'
             + '?token=' + context.data.slack_token
-            + '&channel=' + context.data.slack_channel
+            + '&channel=' + '#random'
             + '&user=' + (context.data.slack_user || 'WebTask')
             + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.full_name + '`');
         request({ url: url, method: 'POST' }, function (error, res, body) {

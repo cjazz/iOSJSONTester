@@ -1,14 +1,6 @@
-var request = require('request');
-
-console.log('Logging push for ' + context.webhook.repository.full_name);
-
 return function (context, callback) {
-    request({ 
-        url:'https://hooks.slack.com/services/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', 
-        method: 'POST',
-        payload: {'channel': '#random', 'text': 'New Code has been committed for ' + context.webhook.repository.full_name}
+    console.log('Logging push for' + context.webhook.repository.full_name);
        
     }, function (error, res, body) {
         callback(error, body);
-    });
 }

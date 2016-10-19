@@ -1,5 +1,12 @@
-module.exports = function(context, callback) {
-  // context.webhook contains the webhook payload provided by GitHub
-  // context.data contains URL query and webtask token parameters
-  callback(null, { some: 'result' });
-}   
+var request = require('request');
+
+return function (context, callback) {
+    request({ 
+        url:'https://hooks.slack.com/services/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', 
+        method: 'POST',
+        payload: {'channel': '#random', 'text': 'New Code has been committed to the HB Repo'}
+       
+    }, function (error, res, body) {
+        callback(error, body);
+    });
+}

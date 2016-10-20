@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#define HTTP_BIGLEAGUE_ISSUE 202
+#define OFFERS_LOCATION [NSURL URLWithString:@"http://www.hushboxlive.com/offers.json"]
+
 
 @interface ViewController ()
 
@@ -17,7 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *URL = [NSURL URLWithString:@"http://ip.jsontest.com"];
+    [self loadCurrentOffers];
+}
+
+-(void)loadCurrentOffers
+{
+    NSURL *URL = OFFERS_LOCATION;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -25,18 +33,53 @@
                                             completionHandler:
                                   ^(NSData *data, NSURLResponse *response, NSError *error) {
                                       
+                                      NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                      
+                                      if ((long)[httpResponse statusCode] > HTTP_BIGLEAGUE_ISSUE)
+                                      {
+                                          return;
+                                      }
+                                      
                                       if (!error) {
-                                          __block NSDictionary *json;
-                                          json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                          NSLog(@"response: %@",json);
+                                          
+                                          NSString *fileName = @"offers.json";
+                                          
+                                          if (data)
+                                          {
+                                              NSFileManager* fm = [NSFileManager new];
+                                              NSError* err = nil;
+                                              NSURL *docsurl = [fm URLForDirectory:NSDocumentDirectory
+                                                                          inDomain:NSUserDomainMask
+                                                                 appropriateForURL:nil
+                                                                            create:YES
+                                                                             error:&err];
+                                              NSURL *jsonFolder = [docsurl URLByAppendingPathComponent:@"json"];
+                                              
+                                              
+                                              if ([fm createDirectoryAtURL:jsonFolder
+                                               withIntermediateDirectories:YES
+                                                                attributes:nil
+                                                                     error:&err])
+                                              {
+                                                  NSURL *fileURL = [jsonFolder URLByAppendingPathComponent:fileName];
+                                                  
+                                                  if ([data writeToURL:fileURL options:NSDataWritingAtomic error:&err])
+                                                  {
+                                                      NSLog(@"file saved :%@",fileName);
+                                                  }
+                                                  else
+                                                  {
+                                                      NSLog(@"file not saved :%@ error: %@",fileName, err);
+                                                  }
+                                              }
+                                          }
+                                          
                                       } else NSLog(@"Error : %@",[error localizedDescription]);
                                       
                                   }];
-    
     [task resume];
 
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

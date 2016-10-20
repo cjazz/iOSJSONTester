@@ -1,0 +1,40 @@
+[
+  [
+    {
+      "title": "Beer Festival with Washington Beer!",
+      "category": "Food",
+      "subCategory": "Alcohol",
+      "merchantID": "PTX123123",
+      "merchantImage": "budweiserIcon",
+      "issueDate": "11/01/2016",
+      "url": "http://washingtonbeer.com/festivals/south-sound-ipa-festival.php"
+    },
+    {
+      "title": "Free Lunch! - Slice and a Coke!",
+      "category": "Food",
+      "subCategory": "Lunch",
+      "merchantID": "PTX321321",
+      "merchantImage": "zeeks",
+      "expiryDate": "",
+      "url": "http://zeekspizza.com/",
+      "New item": {
+        "title": "Free Lunch! - Slice and a Coke!",
+        "category": "Food",
+        "subCategory": "Lunch",
+        "merchantID": "PTX321321",
+        "merchantImage": "zeeks",
+        "expiryDate": "",
+        "url": "http://zeekspizza.com/"
+      }
+    },
+    {
+      "title": "DSW - Addidas Mana Bounce",
+      "category": "Clothing",
+      "subCategory": "Shoes",
+      "merchantID": "PTX9584",
+      "merchantImage": "DSWLogo",
+      "issueDate": "11/20/2016",
+      "url": "http://www.dsw.com/Athletic-Featured-Brands-adidas/_/N-lzzg?cm_re=ALP-20161020-Feat-D-Adidas-AdidasManaBounce"
+    }
+  ]
+]

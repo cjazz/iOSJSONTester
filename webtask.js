@@ -1,5 +1,5 @@
 module.exports = function(context, callback) {
-    console.log('Repo ' +context.webhook.repository.full_name)
+    console.log('Repo ' +context.webhook.repository.full_name);
   // context.webhook contains the webhook payload provided by GitHub
   // context.data contains URL query and webtask token parameters
   callback(null, { thing: 'results' });

@@ -1,6 +1,6 @@
 var request = require('request');
 
-return function (context, callback) {
+return function (context, cb) {
     if (context.data.slack_token && context.data.slack_channel) {
         console.log('Posting message to slack for repository ' 
             + context.webhook.repository.full_name);
@@ -10,11 +10,11 @@ return function (context, callback) {
             + '&user=' + (context.data.slack_user || 'WebTask')
             + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.full_name + '`');
         request({ url: url, method: 'POST' }, function (error, res, body) {
-            callback(error, body);
+            cb(error, body);
         });
     }
     else {
         console.log('Repository ' + context.webhook.repository.full_name + ' changed but slack credentials not supplied.');
-        return callback();
+        return cb();
     }
 }

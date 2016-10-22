@@ -1,4 +1,4 @@
-var request = require('request');
+var req = require('request');
 
 return function (context, cb) {
     if (context.data.slack_token && context.data.slack_channel) {
@@ -9,7 +9,7 @@ return function (context, cb) {
             + '&channel=' + context.data.slack_channel
             + '&user=' + (context.data.slack_user || 'WebTask')
             + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.full_name + '`');
-        request({ url: url, method: 'POST' }, function (error, res, body) {
+        req({ url: url, method: 'POST' }, function (error, res, body) {
             cb(error, body);
         });
     }

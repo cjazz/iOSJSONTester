@@ -2,4 +2,4 @@ Test cases:
 
 1. test 
 2. After setting up secrets......
-3: s
+3: Update after generating a new URL w/secrets

@@ -8,7 +8,7 @@ return function (context, cb) {
             + '?token=' + context.data.slack_token
             + '&channel=' + context.data.slack_channel
             + '&user=' + (context.data.slack_user || 'WebTask')
-            + '&text=' + encodeURIComponent('Changes made in `' + context.webhook.repository.full_name + '`' + ' url: ' + context.webhook.repository.html_url + ' by:' +context.webhook.committer.name);
+            + '&text=' + encodeURIComponent('Changes made in `' + context.webhook.repository.full_name + '`' + ' url: ' + context.webhook.repository.html_url + ' by:' +context.webhook.repository.collaborators_url);
            // + '&text=' +('Changes in ' +context.webhook.repository.full_name + ' At: ' + context.webhook.repository.html_url);
             //+ '&text=' + context.webhook.repository.html_url;
         req({ url: url, method: 'POST' }, function (error, res, body) {

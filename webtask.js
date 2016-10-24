@@ -8,8 +8,8 @@ return function (context, cb) {
             + '?token=' + context.data.slack_token
             + '&channel=' + context.data.slack_channel
             + '&user=' + (context.data.slack_user || 'WebTask')
-           // + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.html_url + '`');
-            + '&text=' + context.webhook.repository.html_url;
+            + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.html_url + '`' + '@: ' + context.webhook.repository.html_url);
+            //+ '&text=' + context.webhook.repository.html_url;
         req({ url: url, method: 'POST' }, function (error, res, body) {
             cb(error, body);
         });

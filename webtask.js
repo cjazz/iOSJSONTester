@@ -8,7 +8,7 @@ return function (context, cb) {
             + '?token=' + context.data.slack_token
             + '&channel=' + context.data.slack_channel
             + '&user=' + (context.data.slack_user || 'WebTask')
-            + '&text=' + encodeURIComponent('Changes in `' + context.webhook.commits.url + '`');
+            + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.full_name + '`');
         req({ url: url, method: 'POST' }, function (error, res, body) {
             cb(error, body);
         });

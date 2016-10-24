@@ -9,7 +9,7 @@ return function (context, cb) {
             + '&channel=' + context.data.slack_channel
             + '&user=' + (context.data.slack_user || 'WebTask')
            // + '&text=' + encodeURIComponent('Changes in `' + context.webhook.repository.html_url + '`');
-            + '&text=' +('Changes in ' +context.webhook.repository.full_name + 'at: ' + context.webhook.repository.html_url);
+            + '&text=' +('Changes in ' +context.webhook.repository.full_name + '\n @: ' + context.webhook.repository.html_url);
             //+ '&text=' + context.webhook.repository.html_url;
         req({ url: url, method: 'POST' }, function (error, res, body) {
             cb(error, body);

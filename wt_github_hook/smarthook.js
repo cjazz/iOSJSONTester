@@ -1,4 +1,6 @@
 
+// https://raw.githubusercontent.com/cjazz/iOSJSONTester/master/wt_github_hook/smarthook.js
+
 var async = require('async'), request = require('request');
 
 return function (context, req, res) {

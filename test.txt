@@ -3,3 +3,4 @@ Test cases:
 1. test 
 2. After setting up secrets......
 3: Update after generating a new URL w/secrets
+4: Update after updating Github repo webhook url to point to local smarthook.js

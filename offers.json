@@ -16,16 +16,7 @@
       "merchantID": "PTX321321",
       "merchantImage": "zeeks",
       "expiryDate": "",
-      "url": "http://zeekspizza.com/",
-      "New item": {
-        "title": "Free Lunch! - Slice and a Coke!",
-        "category": "Food",
-        "subCategory": "Lunch",
-        "merchantID": "PTX321321",
-        "merchantImage": "zeeks",
-        "expiryDate": "",
-        "url": "http://zeekspizza.com/"
-      }
+      "url": "http://zeekspizza.com/"
     },
     {
       "title": "DSW - Addidas Mana Bounce",

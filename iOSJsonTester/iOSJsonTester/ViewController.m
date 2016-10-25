@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #define HTTP_BIGLEAGUE_ISSUE 202
-#define OFFERS_LOCATION [NSURL URLWithString:@"http://www.hushboxlive.com/offers.json"]
+#define OFFERS_LOCATION [NSURL URLWithString:@"https://raw.githubusercontent.com/cjazz/iOSJSONTester/master/offers.json"]
 #import "OffersVC.h"
 
 @interface ViewController ()

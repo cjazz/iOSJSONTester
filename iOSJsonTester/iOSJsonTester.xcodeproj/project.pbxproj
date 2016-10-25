@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		888E66421DBEFD64001396D6 /* ViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E663E1DBEFD64001396D6 /* ViewAnimationController.m */; };
+		888E66431DBEFD64001396D6 /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E66401DBEFD64001396D6 /* PresentationController.m */; };
 		88C32AA51DB71410008EE949 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C32AA41DB71410008EE949 /* main.m */; };
 		88C32AA81DB71410008EE949 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C32AA71DB71410008EE949 /* AppDelegate.m */; };
 		88C32AAB1DB71410008EE949 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C32AAA1DB71410008EE949 /* ViewController.m */; };
 		88C32AAE1DB71410008EE949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C32AAC1DB71410008EE949 /* Main.storyboard */; };
 		88C32AB01DB71410008EE949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C32AAF1DB71410008EE949 /* Assets.xcassets */; };
 		88C32AB31DB71410008EE949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C32AB11DB71410008EE949 /* LaunchScreen.storyboard */; };
+		88DF3DB41DBE81E100D8C428 /* OffersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DF3DB31DBE81E100D8C428 /* OffersVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		888E663E1DBEFD64001396D6 /* ViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAnimationController.m; sourceTree = "<group>"; };
+		888E663F1DBEFD64001396D6 /* ViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAnimationController.h; sourceTree = "<group>"; };
+		888E66401DBEFD64001396D6 /* PresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationController.m; sourceTree = "<group>"; };
+		888E66411DBEFD64001396D6 /* PresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationController.h; sourceTree = "<group>"; };
 		88C32AA01DB71410008EE949 /* iOSJsonTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSJsonTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C32AA41DB71410008EE949 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88C32AA61DB71410008EE949 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +33,8 @@
 		88C32AAF1DB71410008EE949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88C32AB21DB71410008EE949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C32AB41DB71410008EE949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88DF3DB21DBE81E100D8C428 /* OffersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersVC.h; sourceTree = "<group>"; };
+		88DF3DB31DBE81E100D8C428 /* OffersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,12 @@
 				88C32AA91DB71410008EE949 /* ViewController.h */,
 				88C32AAA1DB71410008EE949 /* ViewController.m */,
 				88C32AAC1DB71410008EE949 /* Main.storyboard */,
+				88DF3DB21DBE81E100D8C428 /* OffersVC.h */,
+				88DF3DB31DBE81E100D8C428 /* OffersVC.m */,
+				888E663F1DBEFD64001396D6 /* ViewAnimationController.h */,
+				888E663E1DBEFD64001396D6 /* ViewAnimationController.m */,
+				888E66411DBEFD64001396D6 /* PresentationController.h */,
+				888E66401DBEFD64001396D6 /* PresentationController.m */,
 				88C32AAF1DB71410008EE949 /* Assets.xcassets */,
 				88C32AB11DB71410008EE949 /* LaunchScreen.storyboard */,
 				88C32AB41DB71410008EE949 /* Info.plist */,
@@ -152,8 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C32AAB1DB71410008EE949 /* ViewController.m in Sources */,
+				888E66421DBEFD64001396D6 /* ViewAnimationController.m in Sources */,
 				88C32AA81DB71410008EE949 /* AppDelegate.m in Sources */,
 				88C32AA51DB71410008EE949 /* main.m in Sources */,
+				88DF3DB41DBE81E100D8C428 /* OffersVC.m in Sources */,
+				888E66431DBEFD64001396D6 /* PresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PW6A8Y96ZX;
 				INFOPLIST_FILE = iOSJsonTester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hushbox.iOSJsonTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PW6A8Y96ZX;
 				INFOPLIST_FILE = iOSJsonTester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hushbox.iOSJsonTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +332,7 @@
 				88C32AB91DB71410008EE949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
